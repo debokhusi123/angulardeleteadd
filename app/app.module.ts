@@ -8,6 +8,9 @@ import { ProductsComponent } from './shop/products/products.component';
 import { CatalogComponent } from './shop/catalog/catalog.component';
 import{RouterModule} from "@angular/router";
 import { TodoComponent } from './task/todo/todo.component';
+import { ApiComponent } from './http/api/api.component';
+import { ServiceComponent } from './service/service.component';
+import { RemotecallService } from "./remotecall.service";
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { TodoComponent } from './task/todo/todo.component';
     FamilyComponent,
     ProductsComponent,
     CatalogComponent,
-    TodoComponent
+    TodoComponent,
+    ApiComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule
@@ -33,13 +38,19 @@ component:ProductsComponent
 
     }
     {
-     path:"todo" 
+     path:"todo" ,
 
     component:TodoComponent
     }
-  ]),
+    { path:"remote" ,
+
+    component:ApiComponent
+    }
+
+
+      ]),
   ],
-  providers: [],
+  providers: [RemotecallService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
