@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="id">
+  <h1 style="color:yellow"item-width="100px"><marquee> 
+    Hello{{title}}
+  </marquee></h1>
+  </div>
+  <div id="id1">
+  <h2>Number Addition:{{num1+num2}}</h2>
+  <h4>
+    NUM1:<input type="number" min="0" max="10" [(ngModel)]="num1"><br><br>
+    NUM2:<input type="number" min="0" max="10" [(ngModel)]="num2"><br><br>
+    <button (click)="sum()">Add</button><br></h4>
+<h2><b>Sum:{{total}}
+
+</b>
+</h2>
+We are from family component:
+<div>
+  <cts-family></cts-family>
+</div>
+Shop:<a href="/catalog">Catalog </a>
+<a href="/products">Products</a>
+<a href="/todo">Task</a>
+<router-outlet></router-outlet>
+  </div>
